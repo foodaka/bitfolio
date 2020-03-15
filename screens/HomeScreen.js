@@ -32,10 +32,10 @@ const styles = StyleSheet.create({
     marginTop: 3,
     marginLeft: -10,
   },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
+  // getStartedContainer: {
+  //   alignItems: 'center',
+  //   marginHorizontal: 50,
+  // },
   homeScreenFilename: {
     marginVertical: 7,
   },
@@ -100,6 +100,10 @@ const styles = StyleSheet.create({
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
+    display: 'flex',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   title: {
     fontSize: 32,
@@ -141,7 +145,7 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container} >
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
-          <View style={styles.welcomeContainer}>
+          {/* <View style={styles.welcomeContainer}>
             <Image
               source={
                 __DEV__
@@ -150,12 +154,12 @@ export default class HomeScreen extends React.Component {
               }
               style={styles.welcomeImage}
             />
-          </View>
+          </View> */}
 
-          <View style={styles.getStartedContainer}>
-            <DevelopmentModeNotice />
+          <View>
+            {/* <DevelopmentModeNotice /> */}
 
-            <Text style={styles.coinRow}>Open up the code for this screen: YOLO</Text>
+            {/* <Text style={styles.coinRow}>Open up the code for this screen: YOLO</Text> */}
             {
               assets.length > 0 &&
               <FlatList
